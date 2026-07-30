@@ -1,13 +1,13 @@
 %define upstream_name    GPS-Lowrance
 Name:		perl-%{upstream_name}
 Version:	0.31
-Release:	7
+Release:	1
 
 Summary:	Convert between mercator meters and degrees
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/GPS-Lowrance
-Source0:	http://www.cpan.org/modules/by-module/Geo/%{upstream_name}-%{version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/R/RR/RRWO/GPS-Lowrance-0.31.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -25,14 +25,13 @@ Methods
     * connect
 
 %prep
-%setup -q -n %{upstream_name}-%{version}
+%setup -q -n GPS-Lowrance-0.31
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
-%make
-
+%make_build
 %check
-#make test
+#make test || :
 
 %install
 %makeinstall_std
@@ -41,17 +40,4 @@ perl Makefile.PL INSTALLDIRS=vendor
 %doc Changes README
 %{_mandir}/man3/*
 %{perl_vendorlib}/*
-
-%changelog
-* Sun Apr 17 2011 Funda Wang <fwang@mandriva.org> 0.310.0-2mdv2011.0
-+ Revision: 654192
-- rebuild for updated spec-helper
-
-* Sun May 31 2009 Jérôme Quelin <jquelin@mandriva.org> 0.310.0-1mdv2011.0
-+ Revision: 381691
-- import perl-GPS-Lowrance
-
-
-* Sun May 31 2009 cpan2dist 0.31-1mdv
-- initial mdv release, generated with cpan2dist
 
