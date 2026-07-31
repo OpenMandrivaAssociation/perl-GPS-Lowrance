@@ -1,7 +1,8 @@
 %define upstream_name    GPS-Lowrance
+%define upstream_version 0.31
 Name:		perl-%{upstream_name}
 Version:	0.31
-Release:	1
+Release:	2
 
 Summary:	Convert between mercator meters and degrees
 License:	GPL+ or Artistic
