@@ -2,7 +2,7 @@
 %define upstream_version 0.31
 Name:		perl-%{upstream_name}
 Version:	0.31
-Release:	2
+Release:	3
 
 Summary:	Convert between mercator meters and degrees
 License:	GPL+ or Artistic
